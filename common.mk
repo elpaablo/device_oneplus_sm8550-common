@@ -450,5 +450,8 @@ PRODUCT_PACKAGES += \
 # V4A
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
+# Inherit Basic Call Recorder (BCR)
+$(call inherit-product-if-exists, vendor/bcr/bcr.mk)
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/sm8550-common/sm8550-common-vendor.mk)
