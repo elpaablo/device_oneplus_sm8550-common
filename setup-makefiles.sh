@@ -41,7 +41,8 @@ function lib_to_package_fixup_odm_variants() {
 
     case "$1" in
         libpwirisfeature | \
-            libpwirishalwrapper)
+            libpwirishalwrapper | \
+            vendor.oplus.hardware.touch-V1-ndk)
             echo "$1_odm"
             ;;
         *)
