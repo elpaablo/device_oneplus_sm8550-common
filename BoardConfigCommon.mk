@@ -128,11 +128,6 @@ TARGET_KERNEL_EXT_MODULES := \
 	qcom/opensource/bt-kernel \
 	nxp/opensource/driver
 
-# Platform
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := kalama
-TARGET_KERNEL_ADDITIONAL_FLAGS += TARGET_BOARD_PLATFORM=$(TARGET_BOARD_PLATFORM)
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
@@ -184,7 +179,7 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/sm8550-common/sepolicy/vendor
+# BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/sm8550-common/sepolicy/vendor
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
